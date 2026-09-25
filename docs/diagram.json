@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Your Name",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "gas", "top": -100, "left": 200, "attrs": { "value": "0" } },
+    { "type": "wokwi-potentiometer", "id": "smoke", "top": -100, "left": 300, "attrs": { "value": "0" } },
+    { "type": "wokwi-led", "id": "ledG", "top": 50, "left": 200, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "ledY", "top": 80, "left": 200, "attrs": { "color": "yellow" } },
+    { "type": "wokwi-led", "id": "ledR", "top": 110, "left": 200, "attrs": { "color": "red" } },
+    { "type": "wokwi-buzzer", "id": "bz1", "top": 150, "left": 200, "attrs": { "volume": "0.1" } },
+    { "type": "wokwi-pushbutton", "id": "btn1", "top": 200, "left": 200, "attrs": { "color": "red" } }
+  ],
+  "connections": [
+    [ "esp:34", "gas:SIG", "green", [] ],
+    [ "esp:35", "smoke:SIG", "green", [] ],
+    [ "esp:GND.1", "gas:GND", "black", [] ],
+    [ "esp:GND.1", "smoke:GND", "black", [] ],
+    [ "esp:3V3", "gas:VCC", "red", [] ],
+    [ "esp:3V3", "smoke:VCC", "red", [] ],
+    [ "esp:12", "ledG:A", "green", [] ],
+    [ "esp:13", "ledY:A", "yellow", [] ],
+    [ "esp:15", "ledR:A", "red", [] ],
+    [ "esp:14", "bz1:1", "orange", [] ],
+    [ "esp:0", "btn1:1.l", "blue", [] ],
+    [ "esp:GND.2", "btn1:2.l", "black", [] ]
+  ]
+}
