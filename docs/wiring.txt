@@ -1,0 +1,72 @@
+# Wiring Diagram
+
+## Gas Sensor (MQ-2)
+
+```
+MQ-2      ->  ESP32
+VCC       ->  5V
+GND       ->  GND
+AOUT      ->  GPIO 34
+```
+
+## Smoke Sensor (MQ-7)
+
+```
+MQ-7      ->  ESP32
+VCC       ->  5V
+GND       ->  GND
+AOUT      ->  GPIO 35
+```
+
+## DHT22
+
+```
+DHT22     ->  ESP32
+VCC       ->  3.3V
+GND       ->  GND
+DATA      ->  GPIO 4 (with 10k pull-up to 3.3V)
+```
+
+## LEDs (each with 220 ohm resistor)
+
+```
+LED Green  ->  GPIO 12
+LED Yellow ->  GPIO 13
+LED Red    ->  GPIO 15
+```
+
+## Buzzer
+
+```
+Positive  ->  GPIO 14
+Negative  ->  GND
+```
+
+## Relay Module
+
+```
+IN        ->  GPIO 27
+VCC       ->  5V
+GND       ->  GND
+```
+
+## Solenoid Valve (via Relay)
+
+```
+Relay COM  -> 12V Power +
+Relay NO   -> Solenoid +
+Solenoid - -> 12V Power -
+```
+
+## Reset Button
+
+```
+One leg   ->  GPIO 0
+Other leg ->  GND
+```
+
+## Safety Notes
+
+- Use a proper power supply for the solenoid (12V, 1A+)
+- Keep high-voltage parts isolated
+- Add flyback diode across solenoid
