@@ -130,6 +130,6 @@ Tools > Port > Network Ports > gas-detector
 - Regenerate any leaked API keys immediately
 - Use `secrets.h.example` as a template only
 
-## License
-
-MIT License
+---
+## ⭐ Show Your Support
+If you like this project, give it a **star** ⭐ on GitHub!
