@@ -1,0 +1,6 @@
+secrets.h
+*.key
+.env
+build/
+.vscode/
+.DS_Store
